@@ -12,21 +12,24 @@ The designs were created to the following widths:
 +++ TYPOGRAPHY +++
 ---------------------------
 - Body copy
-   Font-size : 15
-   Line-height : 30
+Font-size : 15
+Line-height : 30
 
 - FONTS
-- h1,h2 : font-family - Merienda
-                 font-size - 96
-	  font-weight - 900
+- h1,h2 : 
+font-family - Merienda
+font-size - 96
+font-weight - 900
 
-- h3,h4,h5,h6 : font-family - Merriweather
-                            font-size - 72
-	             font-weight - 700
+- h3,h4,h5,h6 : 
+font-family - Merriweather
+font-size - 72
+font-weight - 700
 
-- p : font-family - Nunito
-      font-size - 24
-      font-weight - 400
+- p : 
+font-family - Nunito
+font-size - 24
+font-weight - 400
 
 +++ COLORS +++
 ---------------------
