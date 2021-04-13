@@ -1,0 +1,43 @@
+@import "reset.css";
+
+:root {
+    --ff-h1: 'Merienda', cursive;
+    --ff-h: 'Merriweather', sans-serif;
+    --ff-p: 'Nunito', sans-serif; 
+
+    --fw-n: 400;
+    --fw-m: 700;
+    --fw-b: 900;
+
+    --fs-1: 5rem;
+    --fs-2: 3rem;
+    --fs-p: 1rem;
+
+    --primary-clr: #dd636e;
+    --secondary-clr: #0f4552;
+    --bg-clr-one: #74d2ca;
+    --bg-clr-two: #6daedb;
+    --accent-clr: #f0f757;
+}
+
+/* TYPOGRAPHY */
+
+
+/* FONTS */
+
+
+/* LOGO-BAR */
+.logo_bar {
+    background-color: var(--bg-clr-one);
+}
+
+.logo {
+    height: 150px;
+    margin-left: auto;
+    margin-right: auto;
+    padding-top: 0.7em;
+    padding-bottom: 0.7em;;
+    width: 50%;
+}
+
+
