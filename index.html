@@ -12,39 +12,40 @@
 		<title>Aslıca</title>
 	</head>
 	<body>
-		<header>
-			<div class="container row">
+		<header id="header">
+			<div class="container flow">
 				<div class="logobar">
 					<img src="./icons/aslica.svg" alt="Aslıca logo" class="logo" />
 				</div>
 				<nav class="navbar">
 					<ul class="nav-list">
 						<li class="nav-list__item">
-							<a class="nav-list__link" href="#">merhaba</a>
+							<a class="nav-list__link" href="#hello">merhaba</a>
 						</li>
 						<li class="nav-list__item">
-							<a class="nav-list__link" href="#">nasıl örerim</a>
+							<a class="nav-list__link" href="#how">nasıl örerim</a>
 						</li>
 						<li class="nav-list__item">
-							<a class="nav-list__link" href="#">el emeği</a>
+							<a class="nav-list__link" href="#products">el emeği</a>
 						</li>
 						<li class="nav-list__item">
-							<a class="nav-list__link" href="#">küçük ev halkı</a>
+							<a class="nav-list__link" href="#cats">küçük ev halkı</a>
 						</li>
 						<li class="nav-list__item">
-							<a class="nav-list__link" href="#">görüşelim</a>
+							<a class="nav-list__link" href="#meet">görüşelim</a>
 						</li>
 					</ul>
 				</nav>
-				<div class="motto-bar">
-					<h1 class="motto-title">örerek mutlu oluyorum</h1>
+				<div class="mottobar">
+					<div class="motto-shade">
+						<h1 class="motto-title">örerek mutlu oluyorum</h1>
+					</div>
 				</div>
 			</div>
 		</header>
-		<hr />
-		<main>
-			<div class="container">
-				<section class="hello row">
+		<main id="main">
+			<div class="container flow">
+				<section id="hello" class="hello row">
 					<article class="greet">
 						<h2 class="greet-title">merhaba, ben aslı</h2>
 						<p class="greet-text">
@@ -53,7 +54,11 @@
 						</p>
 					</article>
 					<div class="greet-image">
-						<img class="asli-photo" src="#" alt="Aslının fotoğrafı" />
+						<img
+							class="asli-photo"
+							src="./images/asli.png"
+							alt="Aslının fotoğrafı"
+						/>
 					</div>
 				</section>
 				<img src="#" alt="küpe ikonu" class="earring_icon" />
@@ -61,7 +66,7 @@
 				<img src="#" alt="gerdanlık ikonu" class="necklace_icon" />
 			</div>
 			<hr />
-			<section class="how row">
+			<section id="how" class="how">
 				<h1>nasıl hazırlıyorum?</h1>
 				<article class="how-card">
 					<div class="how-icon__wrapper">
@@ -102,7 +107,7 @@
 				</article>
 			</section>
 			<hr />
-			<section class="products row">
+			<section id="products" class="products flow">
 				<div class="product-title">
 					<h2>el emeği, göz nuru</h2>
 				</div>
@@ -118,7 +123,7 @@
 				</div>
 			</section>
 			<hr />
-			<section class="cats row">
+			<section id="cats" class="cats">
 				<div class="cats-intro">
 					<h1 class="cats-intro__title">küçük ev halkını tanıyalım</h1>
 					<p class="cats-intro__text">
@@ -200,23 +205,27 @@
 			</section>
 		</main>
 		<hr />
-		<footer>
-			<div class="meet_info">
-				<h2 class="meet_title">görüşelim</h2>
-				<p class="meet_text">
-					Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium
-					sapiente at cupiditate et deleniti natus consequuntur distinctio ipsum
-					excepturi amet.
-				</p>
-			</div>
-			<div class="meet_social">
-				<a href="mailto:aslıcandan1981@gmail.com"
-					><img src="#" alt="e-mail kısayolu"
-				/></a>
-				<a href="https://www.instagram.com"
-					><img src="#" alt="instagram kısayolu"
-				/></a>
-				<a href="https://twitter.com"><img src="#" alt="twitter kısayolu" /></a>
+		<footer id="footer">
+			<div class="container flow">
+				<div id="meet" class="meet_info">
+					<h2 class="meet_title">görüşelim</h2>
+					<p class="meet_text">
+						Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium
+						sapiente at cupiditate et deleniti natus consequuntur distinctio
+						ipsum excepturi amet.
+					</p>
+				</div>
+				<div class="meet_social">
+					<a href="mailto:aslıcandan1981@gmail.com"
+						><img src="#" alt="e-mail kısayolu"
+					/></a>
+					<a href="https://www.instagram.com"
+						><img src="#" alt="instagram kısayolu"
+					/></a>
+					<a href="https://twitter.com"
+						><img src="#" alt="twitter kısayolu"
+					/></a>
+				</div>
 			</div>
 		</footer>
 	</body>
