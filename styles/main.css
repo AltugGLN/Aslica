@@ -5,29 +5,47 @@
     --ff-h: 'Merriweather', sans-serif;
     --ff-p: 'Nunito', sans-serif; 
 
-    --fw-n: 400;
-    --fw-m: 700;
-    --fw-b: 900;
+    --fw-r: 400;
+    --fw-b: 700;
+    --fw-bb: 900;
 
-    --fs-1: 5rem;
-    --fs-2: 3rem;
-    --fs-p: 1rem;
+    --fs-h1: 5rem;
+    --fs-h2h6: 3rem;
+    --fs-p: 1.2rem;
 
-    --primary-clr: #dd636e;
-    --secondary-clr: #0f4552;
-    --bg-clr-one: #74d2ca;
-    --bg-clr-two: #6daedb;
-    --accent-clr: #f0f757;
+    --primary-clr: rgba(221, 99, 110, 1);
+    --secondary-clr: rgba(15, 69, 82, 1);
+    --bg-clr-one: rgba(116, 210, 202, 1);
+    --bg-clr-two: rgba(109, 174, 219, 1);
+    --accent-clr: rgba(240, 247, 87, 1);
 }
 
-/* TYPOGRAPHY */
+/* TYPOGRAPHY AND FONTS */
 
+body {
+    font-family: var(--ff-p);
+    font-size: var(--fs-p);
+    font-weight: var(--fw-r);
+    line-height: 1.6;
 
-/* FONTS */
+}
+
+h1 {
+    font-family: var(--ff-h1);
+    font-size: var(--fs-h1);
+    font-weight: var(--fw-bb);
+}
+
+/* LAYOUT */
+
+.container {
+    max-width: 1400px;
+    margin: 0 auto;
+}
 
 
 /* LOGO-BAR */
-.logo_bar {
+.logobar {
     background-color: var(--bg-clr-one);
 }
 
@@ -38,6 +56,31 @@
     padding-top: 0.7em;
     padding-bottom: 0.7em;;
     width: 50%;
+}
+
+/* NAVBAR */
+
+.navbar {
+    background-color: var(--bg-clr-one);
+    padding-top: 1.5rem;
+    padding-bottom: 1.5rem;
+
+}
+
+.nav-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.nav-list__item {
+    padding-bottom: 1rem;
+}
+
+.nav-list__link {
+    padding: 1rem;
+    text-decoration: none;
+    color: var(--secondary-clr);
 }
 
 
