@@ -6,12 +6,12 @@
     --ff-p: 'Nunito', sans-serif; 
 
     --fw-r: 400;
-    --fw-b: 700;
-    --fw-bb: 900;
+    --fw-m: 700;
+    --fw-b: 900;
 
-    --fs-h1: 5rem;
-    --fs-h2h6: 3rem;
-    --fs-p: 1.2rem;
+    --fs-n: 1.2rem;
+    --fs-m: 2rem;
+    --fs-b: 4rem;
 
     --primary-clr: rgba(221, 99, 110, 1);
     --secondary-clr: rgba(15, 69, 82, 1);
@@ -24,7 +24,7 @@
 
 body {
     font-family: var(--ff-p);
-    font-size: var(--fs-p);
+    font-size: var(--fs-n);
     font-weight: var(--fw-r);
     line-height: 1.6;
 
@@ -32,23 +32,29 @@ body {
 
 h1 {
     font-family: var(--ff-h1);
-    font-size: var(--fs-h1);
-    font-weight: var(--fw-bb);
+    font-size: var(--fs-m);
+    font-weight: var(--fw-m);
 }
+
+h2,h3 {
+    font-family: var(--ff-h);
+    font-size: var(--fs-m);
+    font-weight: var(--fw-m);
+}
+
 
 /* LAYOUT */
-
-.container {
-    max-width: 1400px;
-    margin: 0 auto;
-}
-
-
-/* LOGO-BAR */
-.logobar {
+#header,
+#hello {
     background-color: var(--bg-clr-one);
 }
 
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* LOGO-BAR */
 .logo {
     height: 150px;
     margin-left: auto;
@@ -61,9 +67,8 @@ h1 {
 /* NAVBAR */
 
 .navbar {
-    background-color: var(--bg-clr-one);
-    padding-top: 1.5rem;
-    padding-bottom: 1.5rem;
+    padding-top: 1.2rem;
+    padding-bottom: 1.2rem;
 
 }
 
@@ -82,5 +87,34 @@ h1 {
     text-decoration: none;
     color: var(--secondary-clr);
 }
+
+/* MOTTOBAR */
+
+.mottobar {
+    height: 50vh;
+    background-image: url(../images/rope-600_600.webp);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center left;
+}
+
+.motto-shade {
+    height: 100%;
+    width: 100%;
+    background: rgba(12,12,12, 0.2);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.motto-title {
+    font-size: 3rem;
+    color: #fff;
+    text-align: center;
+    padding: 2rem;
+    letter-spacing: 5px;
+}
+
+/* GREET */
 
 
