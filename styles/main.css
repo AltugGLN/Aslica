@@ -9,24 +9,26 @@
     --fw-m: 700;
     --fw-b: 900;
 
-    --fs-n: 1.2rem;
-    --fs-m: 2rem;
+    --fs-n: 1.125rem;
+    --fs-m: 2.5rem;
     --fs-b: 4rem;
 
-    --primary-clr: rgba(221, 99, 110, 1);
-    --secondary-clr: rgba(15, 69, 82, 1);
-    --bg-clr-one: rgba(116, 210, 202, 1);
-    --bg-clr-two: rgba(109, 174, 219, 1);
-    --accent-clr: rgba(240, 247, 87, 1);
+    --clr-primary: hsl(355, 64%, 63%, 1);
+    --clr-secondary: rgba(15, 69, 82, 1);
+    --clr-bg-one: rgba(116, 210, 202, 1);
+    --clr-bg-two: rgba(109, 174, 219, 1);
+    --clr-accent: rgba(240, 247, 87, 1);
 }
 
 /* TYPOGRAPHY AND FONTS */
 
 body {
+    background-color: var(--clr-bg-one);
     font-family: var(--ff-p);
     font-size: var(--fs-n);
     font-weight: var(--fw-r);
     line-height: 1.6;
+    color: var(--clr-secondary)
 
 }
 
@@ -38,15 +40,15 @@ h1 {
 
 h2,h3 {
     font-family: var(--ff-h);
-    font-size: var(--fs-m);
-    font-weight: var(--fw-m);
+    font-size: var(--fs-b);
+    font-weight: var(--fw-b);
 }
 
 
 /* LAYOUT */
 #header,
 #hello {
-    background-color: var(--bg-clr-one);
+    background-color: var(--clr-bg-one);
 }
 
 .container {
@@ -85,14 +87,20 @@ h2,h3 {
 .nav-list__link {
     padding: 1rem;
     text-decoration: none;
-    color: var(--secondary-clr);
+    color: var(--clr-secondary);
+}
+
+.nav-list__link:hover {
+    text-decoration: underline;
+    text-decoration-color: var(--clr-secondary);
+    text-underline-offset: 0.3em;
 }
 
 /* MOTTOBAR */
 
 .mottobar {
     height: 50vh;
-    background-image: url(../images/rope-600_600.webp);
+    background-image: url(../images/loveknot_600x600.jpg);
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center left;
@@ -116,5 +124,77 @@ h2,h3 {
 }
 
 /* GREET */
+
+.hello {
+    position: relative;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding-bottom: 14em;
+    z-index:-1;
+ }
+
+ .row {
+    display: flex;
+ }
+ 
+ .greet-title {
+    color: var(--clr-primary);
+    text-align: center;
+    padding: 1em 0;
+    order: 0;
+    z-index: 1;
+ }
+
+ .greet-text {
+    text-align: center;
+    padding: 2em 1em; 
+    order: 2;
+    z-index: 1;
+ }
+
+ .greet-image {
+    width: 80%;
+    order: 1;
+    z-index: 1;
+ }
+ 
+ .asli-photo {
+     background-color: var(--clr-accent);
+     border-radius: 50%;
+ }
+
+ .icon-wrapper {
+     position: absolute;
+ }
+
+ .earrings-icon--wrapper {
+     top: 17em;
+     left: -3em;
+     width: 15em;
+     height: 15em;
+}
+
+.necklace-icon--wrapper {
+    top: 20em;
+    right: -7em;
+    width: 20em;
+    height: 20em;
+}
+
+.yarn-icon {
+    bottom: -50px;
+    width: 90%;
+    height: 300px;
+    z-index: 0;
+}
+
+
+ /* HOW */
+
+.how {
+    background-color: var(--clr-bg-two);
+}
+
 
 
