@@ -12,8 +12,7 @@
 		<title>Aslıca</title>
 	</head>
 	<body>
-		<header id="header">
-			<div class="container flow">
+		<header id="header" class="header container">
 				<div class="logobar">
 					<img src="./icons/aslica.svg" alt="Aslıca logo" class="logo" />
 				</div>
@@ -41,11 +40,9 @@
 						<h1 class="motto-title">örerek mutlu oluyorum</h1>
 					</div>
 				</div>
-			</div>
 		</header>
 		<main id="main">
-			<div class="container flow">
-				<section id="hello" class="hello row">
+				<section id="hello" class="hello container row">
 					<h2 class="greet-title">merhaba,<br />ben aslı</h2>
 					<p class="greet-text">
 						Örgü örmek, yoğun ve stresli bir iş gününün ardından sizin için
@@ -558,27 +555,30 @@
 						class="icon-wrapper yarn-icon"
 					/>
 				</section>
-			</div>
-			<section id="how" class="how">
-				<h1>nasıl hazırlıyorum?</h1>
+			<section id="how" class="how container row">
+				<h3 class="how-title">nasıl hazırlıyorum?</h3>
 				<article class="how-card">
 					<div class="how-icon__wrapper">
-						<img src="" alt="anne ikonu" class="how-icon" />
+						<img src="./icons/mother.svg" alt="anne ikonu" class="how-icon" />
 					</div>
-					<h3 class="how-title">arka plandaki kahraman</h3>
-					<p class="how-text">
+					<h4 class="how-card--title">arka plandaki kahraman</h4>
+					<p class="how-card--text">
 						Lorem ipsum dolor sit amet consectetur, adipisicing elit. Architecto
 						ipsam consectetur laborum tempora nisi molestias! Lorem ipsum dolor
 						sit, amet consectetur adipisicing elit. Minima, exercitationem.
 					</p>
-					<a href="#">Semra hanımla tanışalım</a>
+					<a class="how-card__link" href="#">Semra hanımla tanışalım</a>
 				</article>
 				<article class="how-card">
 					<div class="how-icon__wrapper">
-						<img src="" alt="dikiş makinası ikonu" class="how-icon" />
+						<img
+							src="./icons/sewingmachine.svg"
+							alt="dikiş makinası ikonu"
+							class="how-icon sewingmachine-icon"
+						/>
 					</div>
-					<h3 class="how-title">kullandığım malzemeler</h3>
-					<p class="how-text">
+					<h4 class="how-card--title">kullandığım malzemeler</h4>
+					<p class="how-card--text">
 						Lorem ipsum dolor sit amet, consectetur adipisicing elit. Rerum
 						ullam debitis aspernatur accusamus, aperiam sit ratione voluptatem
 						nostrum praesentium vero nihil dolores, quos tenetur beatae ipsum
@@ -588,10 +588,14 @@
 				</article>
 				<article class="how-card">
 					<div class="how-icon__wrapper">
-						<img src="" alt="ören kadın ikonu" class="how-icon" />
+						<img
+							src="./icons/knitting.svg"
+							alt="ören kadın ikonu"
+							class="how-icon"
+						/>
 					</div>
-					<h3 class="how-title">nasıl örüyorum</h3>
-					<p class="how-text">
+					<h4 class="how-card--title">nasıl örüyorum</h4>
+					<p class="how-card--text">
 						Lorem ipsum dolor sit amet consectetur adipisicing elit. Libero
 						excepturi sunt, commodi quidem optio asperiores. Quasi porro dolorum
 						sit recusandae, harum cupiditate, odio error esse neque quibusdam,
@@ -599,10 +603,9 @@
 					</p>
 				</article>
 			</section>
-			<hr />
-			<section id="products" class="products flow">
+			<section id="products" class="products">
 				<div class="product-title">
-					<h2>el emeği, göz nuru</h2>
+					<h3>el emeği, göz nuru</h2>
 				</div>
 				<div class="glider">
 					<h1>PLACEHOLDER - GLIDERRRRRRRRRRRRRRR</h1>
@@ -699,7 +702,7 @@
 		</main>
 		<hr />
 		<footer id="footer">
-			<div class="container flow">
+			<div class="container">
 				<div id="meet" class="meet_info">
 					<h2 class="meet_title">görüşelim</h2>
 					<p class="meet_text">
