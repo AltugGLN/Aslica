@@ -16,30 +16,35 @@ Font-size : 15
 Line-height : 30
 
 - FONTS  
-- h1,h2 :   
+- h1 :   
 font-family - Merienda  
-font-size - 96  
+font-size - 64px
 font-weight - 900  
 
-- h3,h4,h5,h6 :   
+- h2,h3,h4,h5,h6 :   
 font-family - Merriweather  
-font-size - 72  
-font-weight - 700  
+font-size - 32px / 48px 
+font-weight - 400 / 700  
 
 - p :   
 font-family - Nunito  
-font-size - 24  
-font-weight - 400  
+font-size - 18px 
+font-weight - 300  
 
 +++ COLORS +++
 ---------------------
 - main-Roman: #dd636e   or    hsl(355, 64%, 63%)
 - main-Eden: #0f4552   or    hsl(192, 69%, 19%)
 
-- bg-Turquise: #74d2ca   or     hsl(175, 51%, 64%)
-- bg-Iceberg: #6daedb    or    hsl(205, 60%, 64%)
+- bg-ChampagnePink: #fae8df   or     hsl(20, 73%, 93%)
+- bg-CarolinaBlue: #02a9ea   or    hsl(197, 98%, 46%)
 
 - extra-Lemon:  #f0f757   or    hsl(63, 91%, 65%)
+
+// OLD COLORS ///
+- bg-Turquise: #74d2ca   or     hsl(175, 51%, 64%)
+- bg-Iceberg: #6daedb    or    hsl(205, 60%, 64%))
+/////////////////////
 	
 
 
