@@ -1,200 +1,86 @@
-@import "reset.css";
-
+@import url("https://fonts.googleapis.com/css2?family=Merriweather&family=Montserrat:wght@300&display=swap");
 :root {
-    --ff-h1: 'Merienda', cursive;
-    --ff-h: 'Merriweather', sans-serif;
-    --ff-p: 'Nunito', sans-serif; 
-
-    --fw-r: 400;
-    --fw-m: 700;
-    --fw-b: 900;
-
-    --fs-n: 1.125rem;
-    --fs-m: 2.5rem;
-    --fs-b: 4rem;
-
-    --clr-primary: hsl(355, 64%, 63%, 1);
-    --clr-secondary: rgba(15, 69, 82, 1);
-    --clr-bg-one: rgba(116, 210, 202, 1);
-    --clr-bg-two: rgba(109, 174, 219, 1);
-    --clr-accent: rgba(240, 247, 87, 1);
+  --base: 10;
+  --len: 10; /* length of title */
 }
 
-/* TYPOGRAPHY AND FONTS */
+*,
+*::before,
+*::after {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+html {
+  background-color: #333;
+  color: #fff;
+  font-size: 20px;
+  font-family: "Montserrat", sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+}
+header {
+  height: 100vh;
+  font-family: "Merriweather", serif;
 
-body {
-    background-color: var(--clr-bg-one);
-    font-family: var(--ff-p);
-    font-size: var(--fs-n);
-    font-weight: var(--fw-r);
-    line-height: 1.6;
-    color: var(--clr-secondary)
+  display: flex;
+  flex-direction: column;
+  place-content: center;
+  position: relative;
+}
+header::before {
+  position: absolute;
+  content: "";
+  width: 100vw;
+  height: 100vh;
+  z-index: -1;
+  background-image: url(../house.jpg);
+  background-position: center;
+  background-size: cover;
 
+  transform: scale(2.4);
+  transition: transform 0.5s ease-in 0.5s;
+}
+.loaded header::before {
+  transform: scale(1);
+}
+header h1 {
+  font-size: calc(2vh + 2vw + 2rem * (var(--base) / var(--len)));
+  line-height: 1.5;
+  padding-left: 2rem;
+  background-color: hsla(0, 0%, 100%, 0.8);
+  color: #000;
+
+  height: 33vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  /* PHI 38.2 : 61.8 */
+  border-left: 38.2vw solid hsla(0, 0%, 0%, 0.8);
 }
 
-h1 {
-    font-family: var(--ff-h1);
-    font-size: var(--fs-m);
-    font-weight: var(--fw-m);
+main {
+  padding: 2rem 2rem 2rem 2rem;
+}
+@media all and (min-width: 700px) {
+  main {
+    padding: 2rem 2rem 2rem 0rem;
+    margin-left: 38.2vw;
+  }
 }
 
-h2,h3 {
-    font-family: var(--ff-h);
-    font-size: var(--fs-b);
-    font-weight: var(--fw-b);
+main h3 {
+  font-size: 3rem;
+  font-family: "Merriweather", serif;
+  margin: 2rem 0;
 }
-
-
-/* LAYOUT */
-#header,
-#hello {
-    background-color: var(--clr-bg-one);
+main h4 {
+  font-size: 2rem;
+  font-family: "Merriweather", serif;
+  margin: 2rem 0;
 }
-
-.container {
-    max-width: 1200px;
-    margin: 0 auto;
+main p {
+  font-size: 1rem;
+  line-height: 1.7;
+  margin: 1rem 0;
 }
-
-/* LOGO-BAR */
-.logo {
-    height: 150px;
-    margin-left: auto;
-    margin-right: auto;
-    padding-top: 0.7em;
-    padding-bottom: 0.7em;;
-    width: 50%;
-}
-
-/* NAVBAR */
-
-.navbar {
-    padding-top: 1.2rem;
-    padding-bottom: 1.2rem;
-
-}
-
-.nav-list {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-}
-
-.nav-list__item {
-    padding-bottom: 1rem;
-}
-
-.nav-list__link {
-    padding: 1rem;
-    text-decoration: none;
-    color: var(--clr-secondary);
-}
-
-.nav-list__link:hover {
-    text-decoration: underline;
-    text-decoration-color: var(--clr-secondary);
-    text-underline-offset: 0.3em;
-}
-
-/* MOTTOBAR */
-
-.mottobar {
-    height: 50vh;
-    background-image: url(../images/loveknot_600x600.jpg);
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center left;
-}
-
-.motto-shade {
-    height: 100%;
-    width: 100%;
-    background: rgba(12,12,12, 0.2);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.motto-title {
-    font-size: 3rem;
-    color: #fff;
-    text-align: center;
-    padding: 2rem;
-    letter-spacing: 5px;
-}
-
-/* GREET */
-
-.hello {
-    position: relative;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    padding-bottom: 14em;
-    z-index:-1;
- }
-
- .row {
-    display: flex;
- }
- 
- .greet-title {
-    color: var(--clr-primary);
-    text-align: center;
-    padding: 1em 0;
-    order: 0;
-    z-index: 1;
- }
-
- .greet-text {
-    text-align: center;
-    padding: 2em 1em; 
-    order: 2;
-    z-index: 1;
- }
-
- .greet-image {
-    width: 80%;
-    order: 1;
-    z-index: 1;
- }
- 
- .asli-photo {
-     background-color: var(--clr-accent);
-     border-radius: 50%;
- }
-
- .icon-wrapper {
-     position: absolute;
- }
-
- .earrings-icon--wrapper {
-     top: 17em;
-     left: -3em;
-     width: 15em;
-     height: 15em;
-}
-
-.necklace-icon--wrapper {
-    top: 20em;
-    right: -7em;
-    width: 20em;
-    height: 20em;
-}
-
-.yarn-icon {
-    bottom: -50px;
-    width: 90%;
-    height: 300px;
-    z-index: 0;
-}
-
-
- /* HOW */
-
-.how {
-    background-color: var(--clr-bg-two);
-}
-
-
-
