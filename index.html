@@ -8,11 +8,13 @@
 			href="https://fonts.googleapis.com/css2?family=Merienda:wght@700&family=Merriweather:wght@300;400;700;900&family=Nunito:wght@300;400;700;900&display=swap"
 			rel="stylesheet"
 		/>
+		<link rel="stylesheet" href="./styles/glider.min.css" type="text/css">
+		<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
 		<link rel="stylesheet" href="./styles/main.css" />
 		<title>Aslıca</title>
 	</head>
 	<body>
-		<header id="header" class="header container">
+		<header id="header" class="header container no-scroll">
 				<div class="logobar">
 					<img src="./icons/aslica.svg" alt="Aslıca logo" class="logo" />
 				</div>
@@ -42,7 +44,7 @@
 				</div>
 		</header>
 		<main id="main">
-				<section id="hello" class="hello container row">
+				<section id="hello" class="hello container row no-scroll">
 					<h2 class="greet-title">merhaba,<br />ben aslı</h2>
 					<p class="greet-text">
 						Örgü örmek, yoğun ve stresli bir iş gününün ardından sizin için
@@ -555,7 +557,7 @@
 						class="icon-wrapper yarn-icon"
 					/>
 				</section>
-			<section id="how" class="how container row">
+			<section id="how" class="how container row no-scroll">
 				<h3 class="how-title">nasıl hazırlıyorum?</h3>
 				<article class="how-card">
 					<div class="how-icon__wrapper">
@@ -567,7 +569,7 @@
 						ipsam consectetur laborum tempora nisi molestias! Lorem ipsum dolor
 						sit, amet consectetur adipisicing elit. Minima, exercitationem.
 					</p>
-					<a class="how-card__link" href="#">Semra hanımla tanışalım</a>
+					<a class="page__link" href="#">Semra hanımla tanışalım</a>
 				</article>
 				<article class="how-card">
 					<div class="how-icon__wrapper">
@@ -603,38 +605,83 @@
 					</p>
 				</article>
 			</section>
-			<section id="products" class="products">
-				<div class="product-title">
-					<h3>el emeği, göz nuru</h2>
-				</div>
-				<div class="glider">
-					<h1>PLACEHOLDER - GLIDERRRRRRRRRRRRRRR</h1>
+			<section id="products container no-scroll" class="products">
+				<div class="glider-contain multiple">
+					<h3 class="product-title">el emeği, göz nuru</h2>
+					<button class="glider-prev">
+						<i class="fa fa-chevron-left"></i>
+					</button>
+					<div class="glider">
+						<div class="card">
+							<img src="images/1.jpg" alt="" class="product_image" />
+							<h1 class="product_name">One</h1>
+							<p class="product_text">
+								Lorem ipsum dolor sit, amet consectetur adipisicing elit. Blanditiis
+								aperiam quas nulla? Facilis, alias ratione.
+							</p>
+						</div>
+						<div class="card">
+							<img src="images/2.jpg" alt="" class="product_image" />
+							<h1 class="product_name">Two</h1>
+							<p class="product_text">
+								Lorem ipsum dolor sit amet consectetur adipisicing elit. Nisi
+								recusandae ab necessitatibus, quas vel nesciunt.
+							</p>
+						</div>
+						<div class="card">
+							<img src="images/3.jpg" alt="" class="product_image" />
+							<h1 class="product_name">Three</h1>
+							<p class="product_text">
+								Lorem ipsum dolor sit amet consectetur adipisicing elit. Adipisci
+								laborum ut sequi vel? Quam, sint?
+							</p>
+						</div>
+						<div class="card">
+							<img src="images/4.jpg" alt="" class="product_image" />
+							<h1 class="product_name">Four</h1>
+							<p class="product_text">
+								Lorem, ipsum dolor sit amet consectetur adipisicing elit. Culpa a
+								excepturi sunt ullam accusamus quod.
+							</p>
+						</div>
+						<div class="card">
+							<img src="images/5.jpg" alt="" class="product_image" />
+							<h1 class="product_name">Five</h1>
+							<p class="product_text">
+								Lorem, ipsum dolor sit amet consectetur adipisicing elit. Adipisci
+								hic aperiam velit veritatis ratione consectetur!
+							</p>
+						</div>
+
+					</div>
+					<button class="glider-next">
+						<i class="fa fa-chevron-right"></i>
+					</button>	
 				</div>
 				<div class="handmade-icon__wrapper">
 					<img
-						src=""
+						src="./images/Handmade.png"
 						alt="sevgiyle elle yapılmış ikonu"
 						class="handmade-icon"
 					/>
 				</div>
 			</section>
-			<hr />
-			<section id="cats" class="cats">
+			<section id="cats" class="cats container">
 				<div class="cats-intro">
-					<h1 class="cats-intro__title">küçük ev halkını tanıyalım</h1>
+					<h3 class="cats-intro__title">küçük ev halkını tanıyalım</h3>
 					<p class="cats-intro__text">
 						Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloribus,
 						praesentium excepturi perspiciatis molestias ullam aut nobis iste
 						vero! Hic, quis.
 					</p>
-					<div class="cats-introIcon__wrapper">
-						<img src="#" alt="" class="cats-introIcon" />
+					<div class="cats-introicon__wrapper">
+						<img src="./icons/Cat-icon.svg" alt="Cat Ikonu" class="cats-introIcon" />
 					</div>
 				</div>
 				<div class="cats-subsection">
 					<div class="cat-photo__wrapper">
 						<img
-							src="#"
+							src="./images/pasa.jpg"
 							alt="kedimiz paşanın fotoğrafı"
 							class="cat-photo__pasa"
 						/>
@@ -651,7 +698,7 @@
 				<div class="cats-subsection">
 					<div class="cat-photo__wrapper">
 						<img
-							src="#"
+							src="./images/kontes.jpg"
 							alt="kedimiz kontesin fotoğrafı"
 							class="cat-photo__kontes"
 						/>
@@ -668,7 +715,7 @@
 				<div class="cats-subsection">
 					<div class="cat-photo__wrapper">
 						<img
-							src="#"
+							src="./images/zilli.jpg"
 							alt="kedimiz zillinin fotoğrafı"
 							class="cat-photo__zilli"
 						/>
@@ -685,7 +732,7 @@
 				<div class="cats-subsection">
 					<div class="cat-photo__wrapper">
 						<img
-							src="#"
+							src="./images/oglus.jpg"
 							alt="kedimiz oğluşun fotoğrafı"
 							class="cat-photo__oglus"
 						/>
@@ -698,12 +745,11 @@
 						</p>
 					</div>
 				</div>
+				<a href="#" class="page__link">şapşik fotoğraflar için lütfen tıklayın</a>
 			</section>
 		</main>
-		<hr />
-		<footer id="footer">
-			<div class="container">
-				<div id="meet" class="meet_info">
+		<footer id="footer container">
+				<div class="meet_info">
 					<h2 class="meet_title">görüşelim</h2>
 					<p class="meet_text">
 						Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium
@@ -722,7 +768,8 @@
 						><img src="#" alt="twitter kısayolu"
 					/></a>
 				</div>
-			</div>
 		</footer>
+		<script src="./js/glider.min.js"></script>
+		<script src="./js/main.js"></script>
 	</body>
 </html>

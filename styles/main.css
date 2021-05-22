@@ -72,6 +72,10 @@ h4 {
     display: flex;
 }
 
+.no-scroll {
+    overflow: hidden;
+}
+
 #header,
 #hello,
 #products {
@@ -227,9 +231,9 @@ h4 {
 
 .how-title {
     text-align: center;
-    font-size: 2.5rem;
+    font-size: 2rem;
     width: 90%;
-    color: var(--clr-primary);
+    color: var(--clr-secondary);
     margin-bottom: 1.5em;
 }
 
@@ -252,19 +256,22 @@ h4 {
 }
 
 .how-card--title,
-.how-card--text,
-.how-card__link
- {
+.how-card--text
+{
     text-align: center;
 }
 
-.how-card__link {
+.page__link {
+    display: block;
+    margin: 0 auto;
+    text-align: center;
+    text-decoration: none;
     padding: 1rem;
     text-underline-offset: 0.3em;
     color: var(--clr-accent);
 }
 
-.how-card__link:hover {
+.page__link:hover {
     text-decoration: underline;
     text-decoration-color: var(--clr-secondary);
     text-underline-offset: 0.3em;
@@ -277,6 +284,113 @@ h4 {
 
 .sewingmachine-icon {
     padding: 1.5em 1.5em 0;
+}
+
+/* PRODUCTS */
+
+.products {
+    padding-top: 3em;
+    padding-bottom: 3em;
+}
+
+.product-title {
+    text-align: center;
+    margin-bottom: 1.5em;
+    font-size: 2rem;
+}
+
+.card {
+    background-image: linear-gradient(#dd636e, #0f4552);
+    margin: 1em;
+    padding: 1em;
+    border-radius: 3em;
+}
+
+.product_image {
+    border-radius: 3em;
+}
+
+.product_name {
+    text-align: center;
+    color: var(--clr-primary);
+    font-weight: bolder;
+}
+
+.product_text {
+    text-align: center;
+    color: var(--clr-bg-one);
+}
+
+.glider-contain {
+    width: 85%;
+    margin-top: 2em;
+    margin-bottom: 2em;
+}
+
+.glider-next {
+    right: -15px;
+    top: 50%;
+}
+
+.glider-prev {
+    left: -15px;
+    top: 50%;
+}
+
+.handmade-icon__wrapper {
+    padding-top: 1em;
+    padding-bottom: 1em;
+}
+
+.handmade-icon {
+    margin: 0 auto;
+}
+
+/* Küçük ev halkı */
+
+.cats {
+    padding-top: 3em;
+    padding-bottom: 3em;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}
+
+.cats-intro__title {
+    text-align: center;
+    padding-bottom: 1.5em;
+}
+
+.cats-intro__text {
+    text-align: center;
+    padding-bottom: 2em;
+}
+
+.cats-introicon__wrapper {
+    width: 80%;
+    margin: 0 auto;
+    padding-bottom: 2em;
+}
+
+.cat-photo__wrapper {
+    /* width: 80%;
+    margin: 0 auto; */
+    padding-bottom: 1em;
+}
+
+.cats-subsection {
+    margin: 0 auto;
+    width: 80%;
+    padding-bottom: 2em;
+
+}
+
+.cats-subsection__title,
+.cats-subsection__text {
+    text-align: center;
+}
+
+.cats-subsection__title {
+    padding: 0.5em;
 }
 
 
