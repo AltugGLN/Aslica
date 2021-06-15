@@ -3,7 +3,7 @@
 :root {
     --ff-h1: 'Merienda', cursive;
     --ff-h: 'Merriweather', sans-serif;
-    --ff-p: 'Nunito', sans-serif; 
+    --ff-p: 'Nunito', sans-serif;
 
     --fw-n: 300;
     --fw-r: 400;
@@ -16,14 +16,14 @@
     --fs-bb: 4rem;
 
     --clr-primary: hsl(355, 64%, 63%, 1);
-    --clr-secondary:hsl(192, 69%, 19%,1);
+    --clr-secondary: hsl(192, 69%, 19%, 1);
 
-    --clr-bg-one: hsl(20, 73%, 93%,1);
+    --clr-bg-one: hsl(20, 73%, 93%, 1);
     /* --clr-bg-one: hsl(175, 51%, 64%,1); */
     --clr-bg-two: hsl(197, 98%, 46%, 1);
     /* --clr-bg-two: hsl(205, 60%, 64%,1); */
 
-    --clr-accent: hsl(63, 91%, 65%,1);
+    --clr-accent: hsl(63, 91%, 65%, 1);
 }
 
 /* TYPOGRAPHY AND FONTS */
@@ -61,10 +61,16 @@ h4 {
     font-weight: var(--fw-m);
 }
 
+img {
+    max-width: 100%;
+    max-height: 100%;
+    display: block;
+    object-fit: fill;
+}
 
 /* LAYOUT */
 .container {
-    max-width: 1600px;
+    max-width: 1200px;
     margin: 0 auto;
 }
 
@@ -93,7 +99,7 @@ h4 {
     margin-left: auto;
     margin-right: auto;
     padding-top: 1.6em;
-    padding-bottom: 0.7em;;
+    padding-bottom: 0.7em;
     width: 50%;
 }
 
@@ -131,17 +137,10 @@ h4 {
 
 /* MOTTOBAR */
 
-.mottobar {
-    height: 50vh;
-    background-image: url(../images/loveknot_600x600.jpg);
-    background-repeat: no-repeat;
-    background-size: cover;
-}
-
 .motto-shade {
     height: 100%;
     width: 100%;
-    background: rgba(12,12,12, 0.3);
+    background: rgba(12, 12, 12, 0.3);
     display: flex;
     justify-content: center;
     align-items: center;
@@ -163,48 +162,52 @@ h4 {
     justify-content: center;
     align-items: center;
     padding-bottom: 14em;
-    z-index:-1;
- }
+    z-index: -1;
+}
 
- .greet-title {
+.greet-block {
+    padding: 2em 1em 0;
+    z-index: 1;
+    order: 1;
+}
+
+.greet-title {
     color: var(--clr-primary);
     text-align: center;
-    padding: 1em 0;
+    z-index: 1;
+}
+
+.greet-text {
+    text-align: center;
+    padding-top: 2em;
+
+}
+
+.greet-image {
+    padding-top: 4em;
+    width: 80%;
     order: 0;
     z-index: 1;
- }
+}
 
- .greet-text {
-    text-align: center;
-    padding: 2em 1em 0; 
-    order: 2;
-    z-index: 1;
- }
+.asli-photo {
+    background-color: var(--clr-accent);
+    border-radius: 50%;
+}
 
- .greet-image {
-    width: 80%;
-    order: 1;
-    z-index: 1;
- }
- 
- .asli-photo {
-     background-color: var(--clr-accent);
-     border-radius: 50%;
- }
+.icon-wrapper {
+    position: absolute;
+}
 
- .icon-wrapper {
-     position: absolute;
- }
-
- .earrings-icon--wrapper {
-     top: 14rem;
-     left: -3em;
-     width: 15em;
-     height: 15em;
+.earrings-icon--wrapper {
+    top: 0;
+    left: -3em;
+    width: 15em;
+    height: 15em;
 }
 
 .necklace-icon--wrapper {
-    top: 15em;
+    top: 6em;
     right: -7em;
     width: 20em;
     height: 20em;
@@ -217,7 +220,7 @@ h4 {
 }
 
 
- /* HOW */
+/* HOW */
 
 .how {
     padding-top: 3em;
@@ -242,20 +245,23 @@ h4 {
     flex-direction: column;
 }
 
-/* .how-icon__wrapper {
-    width: 100%;
-} */
+.how-icon__wrapper {
+    width: 300px;
+}
 
 .how-icon {
     width: 80%;
-    height: 80%;
+    height: 100%;
     margin: 0 auto;
 }
 
 .how-card--title,
-.how-card--text
-{
+.how-card--text {
     text-align: center;
+}
+
+.how-card--text {
+    padding: 0 1em;
 }
 
 .page__link {
@@ -276,11 +282,12 @@ h4 {
 
 .how-card--title {
     color: var(--clr-primary);
+    /* min-height: 100px; media query ekle*/
     font-size: 1.75rem;
 }
 
 .sewingmachine-icon {
-    padding: 1.5em 1.5em 0;
+    padding: 1em;
 }
 
 /* PRODUCTS */
@@ -393,7 +400,9 @@ h4 {
 /* MEET */
 
 footer {
-    background-image: url(../images/kelly-sikkema-unsplash.jpg);
+   /* Photo by Kelly Sikkema from Unsplash */
+
+    background-image: url(../images/altbilgi_resmi.jpg);
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
@@ -412,11 +421,11 @@ footer {
 
 .meet_title {
     color: var(--clr-primary);
-    padding-top: 1em;
+    padding: 0.6em;
 }
 
 .meet_text {
-    padding: 2em;
+    padding: 1em 1em 2em;
 }
 
 .social-link {
@@ -436,4 +445,191 @@ footer {
     font-size: var(--fs-n);
 }
 
+/* MEDIA QUERIES */
 
+/* MOTTOBAR */
+
+@media screen and (max-width: 600px) {
+    .mottobar {
+        height: 55vh;
+        background-image: url(../images/ipten_kalp-600x600.jpg);
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+    }
+}
+
+@media screen and (min-width: 601px) and (max-width: 768px) {
+    .mottobar {
+        height: 40vh;
+        background-image: url(../images/ipten_kalp-1000x500.jpg);
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: bottom;
+
+    }
+}
+
+@media screen and (min-width: 769px) and (max-width: 1024px) {
+    .mottobar {
+        height: 40vh;
+        background-image: url(../images/ipten_kalp-1000x500.jpg);
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: bottom;
+    }
+}
+
+@media screen and (min-width: 1025px) {
+    .mottobar {
+        height: 50vh;
+        background-image: url(../images/ipten_kalp-1200x540.jpg);
+        background-repeat: no-repeat;
+        object-fit: cover;
+        background-position: center;
+    }
+}
+
+/* GREET */
+
+@media screen and (min-width: 450px) {
+    .hello {
+        padding-bottom: 18em;
+    }
+
+    .earrings-icon--wrapper {
+        top: 0;
+        left: -3em;
+        width: 17em;
+        height: 17em;
+    }
+    
+    .necklace-icon--wrapper {
+        top: 8em;
+        right: -7em;
+        width: 22em;
+        height: 22em;
+    }
+}
+
+@media screen and (min-width: 600px) and (max-width:768px) {
+    .hello {
+        padding-bottom: 20em;
+    }
+
+    .earrings-icon--wrapper {
+        top: 0;
+        left: -3em;
+        width: 20em;
+        height: 20em;
+    }
+    
+    .necklace-icon--wrapper {
+        top: 8em;
+        right: -7em;
+        width: 27em;
+        height: 27em;
+    }
+
+    .yarn-icon {
+        width: 70%;
+    }
+}
+
+@media screen and (min-width: 769px) and (max-width: 1024px) {
+    .hello {
+        flex-direction: row;
+        padding-bottom: 7em;
+     }
+
+    .greet-block {
+        padding: 5em 3em;
+        width: 50%;
+        order: 0;
+    }
+
+    .greet-title,
+    .greet-text  {
+        text-align: left;
+    }
+
+    .greet-image {
+        width: 50%;
+        padding: 5em 1em;
+    }
+
+    .earrings-icon--wrapper {
+        top: 0em;
+        left: 20em;
+        width: 15em;
+        height: 15em;
+    }
+    
+    .necklace-icon--wrapper {
+        top: 13em;
+        right: -8em;
+        width: 32em;
+        height: 24em;
+    }
+    
+    .yarn-icon {
+        left: 2em;
+        bottom: -50px;
+        width: 40%;
+        z-index: 0;
+    }
+
+
+    
+}
+
+@media screen and (min-width: 1025px) {
+    .hello {
+        flex-direction: row;
+        padding-bottom: 7em;
+        /* justify-content: left; */
+        /* align-items:flex-start; */
+        /* padding-bottom: 14em; */
+        /* z-index: -1; */
+    }
+
+    .greet-block {
+        padding: 5em 3em;
+        width: 50%;
+        order: 0;
+    }
+
+    .greet-title,
+    .greet-text  {
+        text-align: left;
+    }
+
+    .greet-image {
+        width: 50%;
+        padding: 3em 1em;
+    }
+
+    .earrings-icon--wrapper {
+        top: 0em;
+        left: 24em;
+        width: 20em;
+        height: 20em;
+    }
+    
+    .necklace-icon--wrapper {
+        top: 7em;
+        right: -10em;
+        width: 40em;
+        height: 30em;
+    }
+    
+    .yarn-icon {
+        left: 2em;
+        bottom: -50px;
+        width: 40%;
+        z-index: 0;
+    }
+
+
+    
+}
