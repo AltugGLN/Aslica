@@ -12,16 +12,16 @@
 
     --fs-n: 1.125rem;
     --fs-m: 2rem;
-    --fs-b: 3rem;
-    --fs-bb: 4rem;
+    --fs-l: 3rem;
+    --fs-xl: 4rem;
+    --fs-xxl: 4.5rem;
+
 
     --clr-primary: hsl(355, 64%, 63%, 1);
     --clr-secondary: hsl(192, 69%, 19%, 1);
 
     --clr-bg-one: hsl(20, 73%, 93%, 1);
-    /* --clr-bg-one: hsl(175, 51%, 64%,1); */
     --clr-bg-two: hsl(197, 98%, 46%, 1);
-    /* --clr-bg-two: hsl(205, 60%, 64%,1); */
 
     --clr-accent: hsl(63, 91%, 65%, 1);
 }
@@ -39,13 +39,13 @@ body {
 
 h1 {
     font-family: var(--ff-h1);
-    font-size: var(--fs-bb);
+    font-size: var(--fs-l);
     font-weight: var(--fw-b);
 }
 
 h2 {
     font-family: var(--ff-h);
-    font-size: var(--fs-b);
+    font-size: var(--fs-l);
     font-weight: var(--fw-b);
 }
 
@@ -57,8 +57,8 @@ h3 {
 
 h4 {
     font-family: var(--ff-h);
-    font-size: var(--fs-n);
-    font-weight: var(--fw-m);
+    font-size: var(--fs-m);
+    font-weight: var(--fw-n);
 }
 
 img {
@@ -147,7 +147,6 @@ img {
 }
 
 .motto-title {
-    font-size: 3rem;
     color: #fff;
     text-align: center;
     padding: 2rem;
@@ -184,7 +183,7 @@ img {
 }
 
 .greet-image {
-    padding-top: 4em;
+    padding: 4em 0 4em;
     width: 80%;
     order: 0;
     z-index: 1;
@@ -214,9 +213,10 @@ img {
 }
 
 .yarn-icon {
-    bottom: -50px;
+    bottom: -30px;
     width: 90%;
     z-index: 0;
+    min-height: 300px;
 }
 
 
@@ -231,7 +231,6 @@ img {
 
 .how-title {
     text-align: center;
-    font-size: 2rem;
     width: 90%;
     color: var(--clr-secondary);
     margin-bottom: 1.5em;
@@ -300,7 +299,6 @@ img {
 .product-title {
     text-align: center;
     margin-bottom: 1.5em;
-    font-size: 2rem;
 }
 
 .card {
@@ -445,54 +443,58 @@ footer {
     font-size: var(--fs-n);
 }
 
-/* MEDIA QUERIES */
+/* ///////////////////////////////MEDIA QUERIES/////////////////////////////// */
 
 /* MOTTOBAR */
 
 @media screen and (max-width: 600px) {
     .mottobar {
-        height: 55vh;
+        height: 60vh;
         background-image: url(../images/ipten_kalp-600x600.jpg);
         background-repeat: no-repeat;
         background-size: cover;
-        background-position: center;
+        background-position: 20% 70%;
+        background-color: limegreen;
     }
 }
 
 @media screen and (min-width: 601px) and (max-width: 768px) {
     .mottobar {
-        height: 40vh;
+        height: 48vh;
         background-image: url(../images/ipten_kalp-1000x500.jpg);
         background-repeat: no-repeat;
         background-size: cover;
-        background-position: bottom;
-
+        background-position: 20% 70%;
+        background-color: limegreen;
     }
 }
 
 @media screen and (min-width: 769px) and (max-width: 1024px) {
     .mottobar {
-        height: 40vh;
+        height: 60vh;
         background-image: url(../images/ipten_kalp-1000x500.jpg);
         background-repeat: no-repeat;
         background-size: cover;
-        background-position: bottom;
+        background-position: 20% 70%;
+        background-color: limegreen;
     }
 }
 
 @media screen and (min-width: 1025px) {
     .mottobar {
-        height: 50vh;
+        height: 55vh;
         background-image: url(../images/ipten_kalp-1200x540.jpg);
         background-repeat: no-repeat;
         object-fit: cover;
-        background-position: center;
+        background-position: 20% 70%;
+        background-color: limegreen;
     }
+
 }
 
-/* GREET */
+@media screen and (max-width: 600px){
 
-@media screen and (min-width: 450px) {
+    /* GREET */
     .hello {
         padding-bottom: 18em;
     }
@@ -510,9 +512,12 @@ footer {
         width: 22em;
         height: 22em;
     }
+
 }
 
-@media screen and (min-width: 600px) and (max-width:768px) {
+@media screen and (min-width: 601px) and (max-width:768px) {
+
+    /* GREET */
     .hello {
         padding-bottom: 20em;
     }
@@ -532,11 +537,31 @@ footer {
     }
 
     .yarn-icon {
-        width: 70%;
+        max-height: 800px;
+        width: 60%;
+        margin: 0 auto;
     }
 }
 
 @media screen and (min-width: 769px) and (max-width: 1024px) {
+    /* GENERAL */
+    body {
+        font-size: 1.25rem;
+    }
+
+    h1 {
+        font-size: var(--fs-xl);
+    }
+
+    h2{
+        font-size: var(--fs-xl);
+    }
+
+    h3 {
+        font-size: var(--fs-l);
+    }
+
+    /* GREET */
     .hello {
         flex-direction: row;
         padding-bottom: 7em;
@@ -575,18 +600,42 @@ footer {
     .yarn-icon {
         left: 2em;
         bottom: -50px;
-        width: 40%;
         z-index: 0;
+        max-height: 400px;
+        width: 40%;
     }
 
+    /* PRODUCTS */
+    .handmade-icon__wrapper {
+        margin: 0 auto; 
+        width: 70%;
+    }
 
-    
 }
 
 @media screen and (min-width: 1025px) {
+
+    /* GENERAL */
+    body {
+        font-size: 1.375rem;
+    }
+
+    h1 {
+        font-size: var(--fs-xxl);
+    }
+
+    h2{
+        font-size: var(--fs-xl);
+    }
+
+    h3 {
+        font-size: var(--fs-l);
+    }
+
+    /* GREET */
     .hello {
         flex-direction: row;
-        padding-bottom: 7em;
+        padding-bottom: 8em;
         /* justify-content: left; */
         /* align-items:flex-start; */
         /* padding-bottom: 14em; */
@@ -626,8 +675,15 @@ footer {
     .yarn-icon {
         left: 2em;
         bottom: -50px;
-        width: 40%;
+        width: 30%;
+        max-height: 300px;
         z-index: 0;
+    }
+
+    /* PRODUCTS */
+    .handmade-icon__wrapper {
+        margin: 0 auto; 
+        width: 60%;
     }
 
 
