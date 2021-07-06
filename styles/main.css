@@ -165,7 +165,7 @@ img {
 }
 
 .greet-block {
-    padding: 2em 1em 0;
+    padding: 1em 1em 0;
     z-index: 1;
     order: 1;
 }
@@ -310,6 +310,7 @@ img {
 
 .product_image {
     border-radius: 3em;
+    min-height: 400px;
 }
 
 .product_name {
@@ -353,37 +354,48 @@ img {
 .cats {
     padding-top: 3em;
     padding-bottom: 3em;
-    flex-wrap: wrap;
-    justify-content: space-evenly;
+    display: flex;
+    flex-direction: column;
 }
 
 .cats-intro__title {
     text-align: center;
-    padding-bottom: 1.5em;
+    padding: 1em 1.5em 1em;
 }
 
 .cats-intro__text {
     text-align: center;
-    padding-bottom: 2em;
+    padding: 1em 2em 2em;
 }
 
 .cats-introicon__wrapper {
-    width: 80%;
+    width: 50%;
     margin: 0 auto;
     padding-bottom: 2em;
 }
 
 .cat-photo__wrapper {
-    /* width: 80%;
-    margin: 0 auto; */
-    padding-bottom: 1em;
+    padding: 1em 0 1em;
+}
+
+.cat-photo {
+    margin: 0 auto;
 }
 
 .cats-subsection {
     margin: 0 auto;
     width: 80%;
     padding-bottom: 2em;
+}
 
+.cats-subsection::before {
+    content: '';
+    display: block;
+    height: 2px; 
+    background: var(--clr-bg-one);
+    opacity: 0.6;
+    width: 100px;
+    margin: 1em auto;
 }
 
 .cats-subsection__title,
@@ -483,14 +495,16 @@ footer {
 @media screen and (min-width: 1025px) {
     .mottobar {
         height: 55vh;
-        background-image: url(../images/ipten_kalp-1200x540.jpg);
+        background-image: url(../images/ipten_kalp-1000x500.jpg);
         background-repeat: no-repeat;
-        object-fit: cover;
+        background-size: cover;
         background-position: 20% 70%;
         background-color: limegreen;
     }
 
 }
+
+/* ALL MEDIA QUERIES */
 
 @media screen and (max-width: 600px){
 
@@ -519,7 +533,11 @@ footer {
 
     /* GREET */
     .hello {
-        padding-bottom: 20em;
+        padding-bottom: 18em;
+    }
+
+    .greet-image {
+        padding: 5em 0 1em;
     }
 
     .earrings-icon--wrapper {
@@ -541,9 +559,27 @@ footer {
         width: 60%;
         margin: 0 auto;
     }
+
+    /* CATS */
+
+    .cats-introicon__wrapper {
+        width: 50%;
+        margin: 0 auto;
+        padding-bottom: 2em;
+    }
+
+    .cat-photo_pasa,
+    .cat-photo_kontes,
+    .cat-photo_zilli,
+    .cat-photo_oglus
+    {
+        max-width: 400px;
+        max-height: 400px;
+    }
+
 }
 
-@media screen and (min-width: 769px) and (max-width: 1024px) {
+@media screen and (min-width: 769px) {
     /* GENERAL */
     body {
         font-size: 1.25rem;
@@ -564,7 +600,7 @@ footer {
     /* GREET */
     .hello {
         flex-direction: row;
-        padding-bottom: 7em;
+        padding-bottom: 9em;
      }
 
     .greet-block {
@@ -610,6 +646,85 @@ footer {
         margin: 0 auto; 
         width: 70%;
     }
+
+    /* CATS */
+    .cats {
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+
+    .cats-intro {
+        display: flex;
+        flex-direction: column;
+        width: 90%;
+        margin: 0 auto;
+    }
+
+    .cats-intro_subsection{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+    .cats-intro__title {
+        padding: 1em 0 1em;
+        width: 100%;
+    }
+
+    .cats-intro__text {
+        text-align: left;
+        width: 60%;
+        padding: 0 0 0 4em;
+    }
+
+    .cats-introicon__wrapper {
+        width: 30%;
+
+    }
+
+    .cats-subsection {
+        display: flex;
+        width: 90%;
+        justify-content: space-around;
+    }
+
+    .cat-photo__wrapper{
+        width: 40%;
+    }
+
+    .cats-subsection__info {
+        width: 50%;
+    }
+
+    .cats-subsection__title,
+    .cats-subsection__text {
+        text-align: left;
+        padding: 0;
+    }
+
+    .cats-subsection::before {
+            display: none;
+    }
+    
+
+    .cat-photo__wrapper_kontes {
+        order: 2;
+    }
+
+    .cats-subsection__info_kontes {
+        order: 1;
+    }
+
+    .cat-photo__wrapper_oglus {
+        order: 2;
+    }
+
+    .cats-subsection__info_oglus {
+        order: 1;
+    }
+
+
+
 
 }
 
