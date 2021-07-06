@@ -1,0 +1,20 @@
+@import "reset.css";
+ 
+body {
+    background: hsl(20, 73%, 93%, 1);
+}
+
+.container {
+    /* margin: 0 auto; */
+    display: flex;
+    max-width: 1200px;
+    width: 100%;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+img {
+    width: 600px;
+    height: 500px;
+    padding: 5px;
+}
